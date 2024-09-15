@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import locale
 
 # Load the pre-trained model
 model_filename = "random_forest_model.pkl"
@@ -84,10 +85,20 @@ input_df = pd.DataFrame([input_data])
 st.subheader("Your Input Features")
 st.table(input_df)
 
+# Set locale to Indian
+locale.setlocale(locale.LC_ALL, "en_IN.UTF-8")
+
+
+def format_price(price):
+    return f"₹{locale.format_string('%.2f', price, grouping=True)}"
+
+
 # Prediction button
 if st.button("🔍 Predict Car Price"):
     predicted_price = loaded_rf_model.predict(input_df)
 
     # Display the predicted price with styling
-    st.success(f"💰 The Predicted Price of the Car is: ₹{predicted_price[0]:,.2f}")
+    st.success(
+        f"💰 The Predicted Price of the Car is: {format_price(predicted_price[0])}"
+    )
     st.balloons()  # Adding an animation when the prediction is made
