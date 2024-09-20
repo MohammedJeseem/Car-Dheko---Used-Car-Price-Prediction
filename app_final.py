@@ -111,7 +111,7 @@ if data is not None:
         Mileage = st.number_input(
             "Mileage (km/l)",
             min_value=5.0,
-            max_value=40.0,
+            max_value=150.0,
             step=0.1,
             value=float(mean_mileage),
             help="Fuel efficiency of the car in kilometers per liter.",
@@ -119,14 +119,14 @@ if data is not None:
         Engine = st.number_input(
             "Engine Capacity (cc)",
             min_value=600,
-            max_value=5000,
+            max_value=15000,
             step=50,
             value=int(mean_engine),
             help="Engine capacity of the car in cubic centimeters (cc).",
         )
         ModelYear = st.number_input(
             "Model Year",
-            min_value=1990,
+            min_value=1950,
             max_value=2024,
             step=1,
             value=int(mean_model_year),
@@ -162,7 +162,7 @@ if data is not None:
         # Number of Owners
         NumberOwner = st.selectbox(
             "Number of Owners",
-            [1, 2, 3, 4],
+            [1, 2, 3, 4, 5],
             help="Select the number of owners the car has had.",
         )
 
