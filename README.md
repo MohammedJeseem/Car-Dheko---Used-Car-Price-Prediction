@@ -114,9 +114,12 @@ Key features used in the model include:
 The preprocessing pipeline ensures categorical and numerical features are handled appropriately.
 ## 🎨 Examples
 
-Here are some example screenshots of the Streamlit application:
+Here are some screenshots of the Streamlit application:
 
+### Feature App
 ![Base App](screenshots/screenshot1.png)
+
+### Basic App
 ![Feature App](screenshots/screenshot2.png)
 
 ## Contributing
