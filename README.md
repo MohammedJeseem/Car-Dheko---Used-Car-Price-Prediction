@@ -112,6 +112,12 @@ Key features used in the model include:
 - Insurance, Kilometers Driven, City
 
 The preprocessing pipeline ensures categorical and numerical features are handled appropriately.
+## 🎨 Examples
+
+Here are some example screenshots of the Streamlit application:
+
+![Base App](screenshots/screenshot1.png)
+![Feature App](screenshots/screenshot2.png)
 
 ## Contributing
 
