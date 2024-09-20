@@ -57,6 +57,10 @@ The **Car Price Prediction App** enables users to predict the resale value of a 
    ```bash
    streamlit run app.py
    ```
+5. Run the Streamlit app: (for all features)
+   ```bash
+   streamlit run app_final.py
+   ```
 
 ## Usage
 
